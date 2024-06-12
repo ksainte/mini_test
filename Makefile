@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ksainte <ksainte@student.42.fr>            +#+  +:+       +#+         #
+#    By: ks19 <ks19@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/14 10:00:31 by tmatis            #+#    #+#              #
-#    Updated: 2024/06/10 12:15:28 by ksainte          ###   ########.fr        #
+#    Updated: 2024/06/12 16:57:29 by ks19             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@
 
 
 NAME	= minishell
-CC 		= clang
+CC 		= clang -g -g3
 CFLAGS	= -Wall -Wextra -Werror
 DFLAGS	= -MMD -MF $(@:.o=.d)
 AUTHOR	= ksainte_bbouaiss
@@ -34,10 +34,7 @@ SRCS_PATH		= ./src
 
 INCLUDE_PATH	= ./include
 
-SRCS			= command_parser/CommandParser.c command_parser/Tokenizer.c \
-					command_parser/TokenizerHelper.c \
-					command_parser/TreeParser.c command_parser/TreeParserHelper.c \
-					command_line_interface/CommandLineInterface.c \
+SRCS			=  command_line_interface/CommandLineInterface.c \
 					
 MAIN			= main.c
 
